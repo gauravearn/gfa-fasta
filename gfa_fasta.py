@@ -6,11 +6,11 @@ def gfafastawrite(gfafile, filewrite):
     a gfa to fasta write for writing the graph connections for the 
     GFA files
     """
-    sort = list(pd.DataFrame([line.split("\t") for line in open("/home/gaurav/Downloads/MT.gfa")], \
+    sort = list(pd.DataFrame([line.split("\t") for line in open(gfafile)], \
                                 columns = ["a","b","c","d","e","f","g"])["c"])
     indices = [i for i in range(len(sort)) if "+" not in sort[i] and "-" not in sort[i]]
     sequences = [i for i in sort if "+" not in i and "-" not in i]
-    ids = list(pd.DataFrame([line.split("\t") for line in open("/home/gaurav/Downloads/MT.gfa")], \
+    ids = list(pd.DataFrame([line.split("\t") for line in open(gfafile)], \
                             columns = ["a","b","c","d","e","f","g"])["b"])[0:len(indices)]
     with open(filewrite, "w") as fastawrite:
         for i in range(len(ids)):
