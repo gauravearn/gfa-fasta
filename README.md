@@ -1,5 +1,5 @@
-# gfa_fasta_write
-a gfa fasta write which reads the GFA alignment from the graphs and writes the fasta. modify the headers as you needs. A single excecution time with the faster iter rates.
+# gfa-fasta
+a gfa fasta write which reads the GFA alignment from the graphs and writes the fasta. modify the headers as you needs.
 
 Gaurav Sablok \
 Academic Staff Member \
